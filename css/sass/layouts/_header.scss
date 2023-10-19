@@ -1,0 +1,174 @@
+.site-header {
+  .top-nav {
+    @include flex-center;
+    width: 100%;
+    min-height: 45px;
+    background-image: $topHeader-color;
+    @include maxWidth(sm) {
+      padding: 7px 0px;
+    }
+    .nav-content {
+      @include flex-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      @media(max-width: 415px) {
+        justify-content: center;
+      }
+      .holder-nav-list {
+        @include flex-between;
+        flex-wrap: wrap;
+        gap: 25px;
+        @include maxWidth(sm) {
+          ul:first-of-type {
+            display: none;
+          }
+        }
+      }
+      .nav-list {
+        @include flex-center;
+        gap: 15px;
+        .item {
+          .link {
+            @include flex-justify(flex-start);
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $white-color;
+            transition: transform ease-out 0.3s;
+            background-color: transparent;
+            .icon {
+              color: $white-color;
+              font-size: 14px;
+            }
+            &:hover {
+              transform: scale(1.04);
+            }
+          }
+        }
+      }
+      .social {
+        @include flex-justify(flex-end);
+        gap: 6px;
+        a {
+          @include circle(22px);
+          @include flex-center;
+          font-size: 11px;
+          background-color: $white-color;
+          color: $main-color;
+          transition: transform ease-out 0.3s;
+          &:hover {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+  .bottom-nav {
+    position: relative;
+    z-index: 111;
+    background-color: $white-color;
+    filter: drop-shadow(0px 1px 4.5px rgba(18, 72, 107, 0.13));
+    h1 {
+      .navbar-brand {
+        margin-left: 0%;
+        img {
+          width: 150px;
+          max-width: 100%;
+          height: auto;
+          transition: transform ease-out 0.3s;
+          &:hover {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+    .navbar-toggler {
+      padding: 0;
+      border: 0px;
+      &:focus {
+        box-shadow: none;
+      }
+      i,
+      svg {
+        font-size: 31px;
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        flex: 1;
+        justify-content: center;
+        .nav-item {
+          .nav-link {
+            position: relative;
+            @include flex-center;
+            gap: 5px;
+            padding: 5px 12px;
+            font-size: 16px;
+            font-weight: 500;
+            color: $nav-link;
+            .arrow {
+              transform: translateY(3px);
+              font-size: 13px;
+              transition: 0.3s;
+            }
+            &.active {
+              color: $active-nav-link;
+              &::after {
+                position: absolute;
+                content: "";
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                transform: scale(0.8);
+                background-color: $active-nav-link;
+                @include maxWidth(sm) {
+                  transform: scale(1);
+                }
+              }
+              &::before {
+                content: none;
+              }
+            }
+            &::before {
+              position: absolute;
+              content: "";
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              height: 2px;
+              transition: $sm-transition;
+              transform: scale(0);
+              background-color: $nav-link;
+            }
+            &:hover {
+              color: $active-nav-link;
+              &::before {
+                background-color: $active-nav-link;
+                transform: scale(0.8);
+                @include maxWidth(sm) {
+                  transform: scale(1);
+                }
+              }
+            }
+          }
+          &.dropdown {
+            .nav-link {
+              &[aria-expanded="true"] {
+                .arrow {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @include maxWidth(sm) {
+//   .collapse:not(.show) {
+//     display: none !important;
+//   }
+// }
