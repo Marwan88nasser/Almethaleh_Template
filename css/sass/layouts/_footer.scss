@@ -1,5 +1,5 @@
 .site-footer {
-  background-color: $footer-bg;
+  background-image: $footer-bg;
   .top-footer {
     color: $white-color;
     .site-info {
@@ -51,24 +51,10 @@
         }
       }
     }
-    .social {
-      @include flex-justify(flex-end);
-      gap: 10px;
-      a {
-        @include circle(40px);
-        @include flex-center;
-        font-size: 20px;
-        background-color: #144f77;
-        color: $white-color;
-        transition: transform ease-out 0.3s;
-        &:hover {
-          transform: scale(1.06);
-        }
-      }
-    }
   }
   .bottom-footer {
-    background-color: #144f77;
+    background-color: #234697;
+    padding: 15px 0px;
     .logo-holder {
       display: flex;
       align-items: flex-end;

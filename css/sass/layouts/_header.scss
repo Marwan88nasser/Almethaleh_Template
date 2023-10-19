@@ -46,21 +46,6 @@
           }
         }
       }
-      .social {
-        @include flex-justify(flex-end);
-        gap: 6px;
-        a {
-          @include circle(22px);
-          @include flex-center;
-          font-size: 11px;
-          background-color: $white-color;
-          color: $main-color;
-          transition: transform ease-out 0.3s;
-          &:hover {
-            transform: scale(0.9);
-          }
-        }
-      }
     }
   }
   .bottom-nav {

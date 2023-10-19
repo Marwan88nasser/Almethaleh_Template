@@ -308,6 +308,93 @@
   width: 200px;
 }
 
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: 0.5s;
+}
+.card:hover .card-front {
+  transform: rotateX(-180deg);
+}
+.card:hover .card-back {
+  transform: rotateX(0deg);
+}
+
+.card-front {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://99px.ru/sstorage/56/2013/12/image_563012130153328414049.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.card-back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+  color: #ffffff;
+  text-align: center;
+}
+.card-back h2 {
+  margin: 60% auto 35% auto;
+  font-size: 26px;
+}
+.card-back h2 span {
+  font-size: 20px;
+}
+.card-back a {
+  height: 20px;
+  width: 20px;
+  padding: 5px 5px;
+  border-radius: 4px;
+  line-height: 20px;
+}
+.card-back a:hover {
+  color: #000000;
+  background-color: #fff;
+}
+
+.box-more-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 15px;
+  background-image: linear-gradient(104deg, #337ccf 0%, #191d88 100%);
+  text-align: center;
+  color: #fff;
+}
+.box-more-about .icon-holder {
+  margin-bottom: 10px;
+}
+.box-more-about .icon-holder i, .box-more-about .icon-holder svg {
+  font-size: 60px;
+}
+.box-more-about .title {
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
 .swiper-landing {
   height: calc(100vh - 45px - 87.42px);
 }
@@ -539,6 +626,28 @@ textarea:focus::placeholder {
   font-size: 17px;
 }
 
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.social a {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  background-color: #fff;
+  color: #12486b;
+  transition: transform ease-out 0.3s;
+}
+.social a:hover {
+  transform: scale(0.9);
+}
+
 .about .about-img {
   width: 100%;
   height: 100%;
@@ -548,6 +657,10 @@ textarea:focus::placeholder {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.more-about {
+  background-color: #f1f6fa;
 }
 
 .contact {
@@ -769,27 +882,6 @@ textarea:focus::placeholder {
 .site-header .top-nav .nav-content .nav-list .item .link:hover {
   transform: scale(1.04);
 }
-.site-header .top-nav .nav-content .social {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 6px;
-}
-.site-header .top-nav .nav-content .social a {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  background-color: #fff;
-  color: #12486b;
-  transition: transform ease-out 0.3s;
-}
-.site-header .top-nav .nav-content .social a:hover {
-  transform: scale(0.9);
-}
 .site-header .bottom-nav {
   position: relative;
   z-index: 111;
@@ -888,7 +980,7 @@ textarea:focus::placeholder {
 }
 
 .site-footer {
-  background-color: #11476b;
+  background-image: linear-gradient(154deg, #337ccf 0%, #191d88 100%);
 }
 .site-footer .top-footer {
   color: #fff;
@@ -941,29 +1033,9 @@ textarea:focus::placeholder {
 .site-footer .top-footer .site-info .lists-hold .list-links .item .link:hover {
   transform: scale(1.06);
 }
-.site-footer .top-footer .social {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 10px;
-}
-.site-footer .top-footer .social a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  background-color: #144f77;
-  color: #fff;
-  transition: transform ease-out 0.3s;
-}
-.site-footer .top-footer .social a:hover {
-  transform: scale(1.06);
-}
 .site-footer .bottom-footer {
-  background-color: #144f77;
+  background-color: #234697;
+  padding: 15px 0px;
 }
 .site-footer .bottom-footer .logo-holder {
   display: flex;
