@@ -6,7 +6,7 @@ html {
 }
 body {
   min-height: 100vh;
-  font-family: "Cairo", sans-serif;
+  font-family: "Tajawal", Sans-serif;
   font-size: 14px;
   color: $main-text-color;
 }
@@ -101,7 +101,43 @@ textarea {
 }
 // End about
 
+.main-content {
+  margin: 50px 0;
+}
 
+//landing-page-img
+.landing-page {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 244px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.coast {
+    background-image: url(https://almethaleh.sa/word/wp-content/uploads/2023/10/Labor-cost.png);
+  }
+  &.join {
+    background-image: url(https://almethaleh.sa/word/wp-content/uploads/2023/10/jobs.png);
+  }
+  .title {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+.text-info {
+  background: linear-gradient(212deg, #0c8dd3, #191d88);
+  padding: 22px 0;
+  text-align: center;
+  margin: 12px 0;
+  h3 {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 35px;
+  }
+}
 .contact {
   padding: 70px 0px;
   position: relative;

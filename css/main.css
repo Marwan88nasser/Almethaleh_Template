@@ -35,12 +35,10 @@
 }
 
 .h-fit {
-  height: -moz-fit-content;
   height: fit-content;
 }
 
 .w-fit {
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -106,7 +104,6 @@
   font-size: 28px;
   line-height: 52px;
   color: #12486b;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   text-align: center;
@@ -196,8 +193,7 @@
 .job-box img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .job-box .title {
@@ -264,8 +260,7 @@
 .country-box .img-holder img {
   width: 45px;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .country-box .content .title {
   font-size: 17px;
@@ -301,11 +296,145 @@
 .partner-box img {
   width: 100px;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .partner-box img.won-custom {
   width: 200px;
+}
+
+.card-coast {
+  border-radius: 22px;
+  border: 1px solid #419197;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  align-items: center;
+  transition: 0.3s;
+}
+.card-coast .img-card img {
+  height: auto;
+  max-width: 100%;
+}
+.card-coast .card-title {
+  font-family: "Tajawal", Sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.card-coast .card-sub {
+  color: #86909c;
+  font-family: "Tajawal", Sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.card-coast .amount {
+  color: #06967d;
+  font-family: "Lato", Sans-serif;
+  font-size: 58px;
+  font-weight: 600;
+}
+.card-coast .amount-info {
+  color: #59697e;
+  font-family: "Tajawal", Sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.card-coast:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  scale: 0.98;
+}
+
+.card-join {
+  border: 1px solid #419197;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+.card-join .header-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-join .title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #12486b;
+}
+.card-join .info-holder .title-info {
+  font-size: 24px;
+  font-weight: 700;
+  color: #12486b;
+}
+.card-join ol {
+  margin: 20px 0;
+}
+.card-join ol li {
+  font-size: 16px;
+  font-weight: 600;
+  color: #12486b;
+}
+.card-join:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  scale: 0.98;
+}
+.card-join .form {
+  padding: 20px;
+  margin: 0 auto;
+}
+.card-join .form .boxes .box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  gap: 15px;
+}
+.card-join .form .boxes .box .inp-holder {
+  width: 100%;
+}
+.card-join .form .boxes .box .inp-holder label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8;
+  color: #0f001a;
+}
+.card-join .form .boxes .box .inp-holder label .sm {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 13px;
+  color: rgba(15, 0, 26, 0.7);
+}
+.card-join .form .boxes .box .inp-holder .inp {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #b4bec8;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card-join .form .boxes .box .inp-holder .inp::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(135, 135, 135, 0.5);
+}
+.card-join .form .boxes .box .btn-sub {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #fff;
+  background-color: #12486b;
+}
+.card-join .form .boxes .box .btn-sub:hover {
+  background-color: #06967d;
+  scale: 1 !important;
 }
 
 .swiper-landing {
@@ -327,8 +456,7 @@
 .swiper-landing .swiper-wrapper .swiper-slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .swiper-landing .swiper-wrapper .swiper-slide .intro-text {
   position: absolute;
@@ -408,12 +536,10 @@
 }
 
 .partners-swiper {
-  height: -moz-fit-content;
   height: fit-content;
 }
 
 .country-swiper {
-  height: -moz-fit-content;
   height: fit-content;
   padding: 20px;
 }
@@ -438,7 +564,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: "Cairo", sans-serif;
+  font-family: "Tajawal", Sans-serif;
   font-size: 14px;
   color: #202124;
 }
@@ -471,11 +597,6 @@ textarea:focus {
 input,
 textarea {
   direction: rtl !important;
-}
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-  opacity: 0;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
 }
 input:focus::placeholder,
 textarea:focus::placeholder {
@@ -546,8 +667,45 @@ textarea:focus::placeholder {
 .about .about-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+
+.main-content {
+  margin: 50px 0;
+}
+
+.landing-page {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 244px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-page.coast {
+  background-image: url(https://almethaleh.sa/word/wp-content/uploads/2023/10/Labor-cost.png);
+}
+.landing-page.join {
+  background-image: url(https://almethaleh.sa/word/wp-content/uploads/2023/10/jobs.png);
+}
+.landing-page .title {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.text-info {
+  background: linear-gradient(212deg, #0c8dd3, #191d88);
+  padding: 22px 0;
+  text-align: center;
+  margin: 12px 0;
+}
+.text-info h3 {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 35px;
 }
 
 .contact {
@@ -624,11 +782,6 @@ textarea:focus::placeholder {
   border: 1px solid #b4bec8;
   font-size: 14px;
   font-weight: 400;
-}
-.contact .form .boxes .box .inp-holder .inp::-moz-placeholder, .contact .form .boxes .box .inp-holder textarea::-moz-placeholder {
-  font-size: 14px;
-  font-weight: 400;
-  color: rgba(135, 135, 135, 0.5);
 }
 .contact .form .boxes .box .inp-holder .inp::placeholder,
 .contact .form .boxes .box .inp-holder textarea::placeholder {
@@ -903,7 +1056,6 @@ textarea:focus::placeholder {
 }
 .site-footer .top-footer .site-info .info {
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   margin-right: auto;
   font-size: 16px;
